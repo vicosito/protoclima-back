@@ -1,12 +1,14 @@
-'use strcit'
+'use strict'
 
 const mongoose =require('mongoose')
 const Schema=mongoose.Schema
 
 const InvernaderoSchema= Schema({
-    name      : String,
+    code       :{ type : String , unique : true, required : true },
+    name       : String,
+    product    : String,
     description: String,
-    product   : String
+    state      : Boolean
 })
 
-module.exports = mongoose.model('invernadero', InvernaderoSchema)
+module.exports = mongoose.model('Invernadero', InvernaderoSchema)
