@@ -43,6 +43,7 @@ api.get('/sensores/:id',SensorCtrl.getSensor);
 
 api.post('/data',DataCtrl.saveData);
 api.get('/getdata',DataCtrl.getData);
+api.post('/getdata2',DataCtrl.getData2);
 
 api.get('/dash',dashCtrl.drawTemperature);
 
