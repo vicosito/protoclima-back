@@ -5,7 +5,7 @@ const Schema=mongoose.Schema
 
 const DataSchema= Schema({
     time      : {type: Date, default:Date.now},
-    id        : String,
+    //id        : String,
     name      : String,
     code      : String,
     temperature : String,

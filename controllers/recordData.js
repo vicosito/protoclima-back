@@ -7,16 +7,23 @@ const fecha= require('../services');
 
 
 function saveData(req, res) {
+    var temperature = 0;
+    var humidity = 0;
 //    var fechah =new Date(fecha.FechaHora());
-
+    if (req.body.temperature<=100){
+        temperature = req.body.temperature;
+    }
+    if (req.body.humidity<=100){
+        humidity = req.body.humidity;
+    }
     const data = new Data({
 
   //      time: fechah,
-        id: req.body.id,
+       // id: req.body.id,
         name: req.body.name,
         code: req.body.code,
-        temperature:req.body.temperature,
-        humidity:req.body.humidity
+        temperature:temperature,
+        humidity:humidity
     });
     data.save((err, dataSave) => {
 
